@@ -1,7 +1,7 @@
 class ClangFormat < Formula
   desc "Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript"
   homepage "https://clang.llvm.org/docs/ClangFormat.html"
-  version "2018-04-24"
+  version "2018-09-18"
 
   stable do
     if MacOS.version >= :sierra
@@ -12,9 +12,9 @@ class ClangFormat < Formula
 
     resource "clang" do
       if MacOS.version >= :sierra
-        url "https://llvm.org/svn/llvm-project/cfe/tags/google/stable/2018-04-24/", :using => :svn
+        url "https://github.com/dpayne/clang/", :using => :git
       else
-        url "http://llvm.org/svn/llvm-project/cfe/tags/google/stable/2018-04-24/", :using => :svn
+        url "https://github.com/dpayne/clang/", :using => :git
       end
     end
   end
@@ -35,9 +35,9 @@ class ClangFormat < Formula
 
     resource "clang" do
       if MacOS.version >= :sierra
-        url "https://llvm.org/svn/llvm-project/cfe/trunk/", :using => :svn
+        url "https://github.com/dpayne/clang/", :using => :git
       else
-        url "http://llvm.org/svn/llvm-project/cfe/trunk/", :using => :svn
+        url "https://github.com/dpayne/clang/", :using => :git
       end
     end
   end
